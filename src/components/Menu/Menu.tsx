@@ -32,49 +32,49 @@ const Menu = () => (
       <IonContent id='content'>
         <IonList>
           <IonItem>
-            <IonIcon icon={accessibilityOutline}></IonIcon>
+            <IonIcon icon={accessibilityOutline} />
             <Link to='/profile'>
               <IonButton fill='clear'>Profile</IonButton>
             </Link>
           </IonItem>
           <IonItem>
-            <IonIcon icon={libraryOutline}></IonIcon>
+            <IonIcon icon={libraryOutline} />
             <Link to='/education'>
               <IonButton fill='clear'>Education</IonButton>
             </Link>
           </IonItem>
           <IonItem>
-            <IonIcon icon={newspaperOutline}></IonIcon>
+            <IonIcon icon={newspaperOutline} />
             <Link to='/experience'>
               <IonButton fill='clear'>Experience</IonButton>
             </Link>
           </IonItem>
           <IonItem>
-            <IonIcon icon={barChartOutline}></IonIcon>
+            <IonIcon icon={barChartOutline} />
             <Link to='/skills'>
               <IonButton fill='clear'>Skills</IonButton>
             </Link>
           </IonItem>
           <IonItem>
-            <IonIcon icon={folderOpenOutline}></IonIcon>
+            <IonIcon icon={folderOpenOutline} />
             <Link to='/projects'>
               <IonButton fill='clear'>Projects</IonButton>
             </Link>
           </IonItem>
           <IonItem>
-            <IonIcon icon={chatboxOutline}></IonIcon>
+            <IonIcon icon={chatboxOutline} />
             <Link to='/contact'>
               <IonButton fill='clear'>Contact</IonButton>
             </Link>
           </IonItem>
           <IonItem>
-            <IonIcon icon={logInOutline}></IonIcon>
+            <IonIcon icon={logInOutline} />
             <Link to='/login'>
               <IonButton fill='clear'>Login</IonButton>
             </Link>
           </IonItem>
           <IonItem>
-            <IonIcon icon={logOutOutline}></IonIcon>
+            <IonIcon icon={logOutOutline} />
             <Link to='/register'>
               <IonButton fill='clear'>Register</IonButton>
             </Link>
