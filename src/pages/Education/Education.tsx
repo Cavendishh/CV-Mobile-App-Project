@@ -4,11 +4,7 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonText,
   IonGrid,
-  IonRow,
-  IonCol,
-  IonImg,
   IonCardContent,
   IonCard,
   IonCardHeader,
@@ -27,29 +23,71 @@ const Education = () => {
         <IonHeader>
           <IonToolbar>
             <MenuButton />
-            <IonTitle>Profile</IonTitle>
+            <IonTitle>Education</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
           <IonGrid>
             <IonCard>
               <IonCardHeader>
-                {/* <IonImg src={profileImg}></IonImg> */}
-                <IonCardTitle>Web Developer Bootcamp 2021</IonCardTitle>
-                <IonCardSubtitle>2020 - 2021</IonCardSubtitle>
+                <IonCardSubtitle className='cardYear'>
+                  2020 - 2021
+                </IonCardSubtitle>
+                <IonCardTitle className='cardTitle'>
+                  Web Developer Bootcamp 2021
+                </IonCardTitle>
+                <IonCardSubtitle className='cardSub'>
+                  Instructor Colt Steele, Udemy
+                </IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>
-                One of my favorite quotes is, "Obstacles don't have to stop you.
-                If you run into a wall, don't turn around and give up. Figure
-                out how to climb it, go through it, or work around it." That is
-                more than just a quote to me. It is more like a principle of how
-                to live my life. This logic applies to everything in life. I am
-                not afraid to make mistakes because mistakes teach you valuable
-                lessons if you are willing to learn from them. Are you looking
-                for a very experienced person for the job? Well, maybe I am not
-                the most experienced person out there for the job - but I most
-                certainly am hard working and try my best every day. A day
-                without learning anything new is a day wasted.
+                Without a doubt, this online bootcamp is the most comprehensive
+                and effective online course on the market currently that doesn't
+                cut any corners. Udemy's most popular web development course
+                with massive amounts of content including lectures, coding
+                exercises, and most importantly, projects. Completely rehauled
+                in October 2020 to prepare students for the 2021 job market.
+              </IonCardContent>
+            </IonCard>
+
+            <IonCard>
+              <IonCardHeader className='cardTitle'>
+                <IonCardSubtitle className='cardYear'>
+                  2019 - 2021
+                </IonCardSubtitle>
+                <IonCardTitle>
+                  Bachelor's Degree Programme in Business Information Technology
+                </IonCardTitle>
+                <IonCardSubtitle className='cardSub'>
+                  Laurea University of Applied Sciences, Finland, Espoo
+                </IonCardSubtitle>
+              </IonCardHeader>
+              <IonCardContent>
+                Specializing in web development technologies. The BIT program
+                provides students with the theoretical and practical knowledge
+                required to operate in the field of ICT. The program works in
+                close co-operation with the business life.
+              </IonCardContent>
+            </IonCard>
+
+            <IonCard>
+              <IonCardHeader>
+                <IonCardSubtitle className='cardYear'>
+                  2021 - 2015
+                </IonCardSubtitle>
+                <IonCardTitle className='cardTitle'>
+                  Vocational Qualification in Electrical &#38; Automation
+                  Engineering
+                </IonCardTitle>
+                <IonCardSubtitle className='cardSub'>
+                  Helsinki Vocational College, Sturenkatu training unit,
+                  Finland, Helsinki
+                </IonCardSubtitle>
+              </IonCardHeader>
+              <IonCardContent>
+                Study Programme/Competence Area in Electrical and Automation
+                Engineering, Electrician. I got granted a scholarship for my
+                achievements in studying.
               </IonCardContent>
             </IonCard>
           </IonGrid>
