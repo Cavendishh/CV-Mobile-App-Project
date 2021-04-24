@@ -10,6 +10,7 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonCardSubtitle,
+  IonText,
 } from '@ionic/react'
 import './Education.css'
 import Menu from '../../components/Menu/Menu'
@@ -27,7 +28,7 @@ const Education = () => {
           </IonToolbar>
         </IonHeader>
         <IonContent>
-          <IonGrid>
+          <IonGrid className='container'>
             <IonCard>
               <IonCardHeader>
                 <IonCardSubtitle className='cardYear'>
@@ -37,16 +38,19 @@ const Education = () => {
                   Web Developer Bootcamp 2021
                 </IonCardTitle>
                 <IonCardSubtitle className='cardSub'>
-                  Instructor Colt Steele, Udemy
+                  <i>Instructor Colt Steele, Udemy</i>
                 </IonCardSubtitle>
               </IonCardHeader>
-              <IonCardContent>
-                Without a doubt, this online bootcamp is the most comprehensive
-                and effective online course on the market currently that doesn't
-                cut any corners. Udemy's most popular web development course
-                with massive amounts of content including lectures, coding
-                exercises, and most importantly, projects. Completely rehauled
-                in October 2020 to prepare students for the 2021 job market.
+              <IonCardContent className='topMargin'>
+                <IonText className='fontSizeColorBlack'>
+                  Without a doubt, this online bootcamp is the most
+                  comprehensive and effective online course on the market
+                  currently that doesn't cut any corners. Udemy's most popular
+                  web development course with massive amounts of content
+                  including lectures, coding exercises, and most importantly,
+                  projects. Completely rehauled in October 2020 to prepare
+                  students for the 2021 job market.
+                </IonText>
               </IonCardContent>
             </IonCard>
 
@@ -59,14 +63,16 @@ const Education = () => {
                   Bachelor's Degree Programme in Business Information Technology
                 </IonCardTitle>
                 <IonCardSubtitle className='cardSub'>
-                  Laurea University of Applied Sciences, Finland, Espoo
+                  <i>Laurea University of Applied Sciences, Finland, Espoo</i>
                 </IonCardSubtitle>
               </IonCardHeader>
-              <IonCardContent>
-                Specializing in web development technologies. The BIT program
-                provides students with the theoretical and practical knowledge
-                required to operate in the field of ICT. The program works in
-                close co-operation with the business life.
+              <IonCardContent className='topMargin'>
+                <IonText className='fontSizeColorBlack'>
+                  Specializing in web development technologies. The BIT program
+                  provides students with the theoretical and practical knowledge
+                  required to operate in the field of ICT. The program works in
+                  close co-operation with the business life.
+                </IonText>
               </IonCardContent>
             </IonCard>
 
@@ -80,14 +86,18 @@ const Education = () => {
                   Engineering
                 </IonCardTitle>
                 <IonCardSubtitle className='cardSub'>
-                  Helsinki Vocational College, Sturenkatu training unit,
-                  Finland, Helsinki
+                  <i>
+                    Helsinki Vocational College, Sturenkatu training unit,
+                    Finland, Helsinki
+                  </i>
                 </IonCardSubtitle>
               </IonCardHeader>
-              <IonCardContent>
-                Study Programme/Competence Area in Electrical and Automation
-                Engineering, Electrician. I got granted a scholarship for my
-                achievements in studying.
+              <IonCardContent className='topMargin'>
+                <IonText className='fontSizeColorBlack'>
+                  Study Programme/Competence Area in Electrical and Automation
+                  Engineering, Electrician. I got granted a scholarship for my
+                  achievements in studying.
+                </IonText>
               </IonCardContent>
             </IonCard>
           </IonGrid>

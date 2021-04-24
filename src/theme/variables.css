@@ -254,6 +254,11 @@ http://ionicframework.com/docs/theming/ */
   /* background-color: red; */
 }
 
-.roundCorner {
-  border-radius: 30px;
+.topMargin {
+  margin-top: 25px;
+}
+
+.fontSizeColorBlack {
+  color: black;
+  font-size: 16px;
 }
