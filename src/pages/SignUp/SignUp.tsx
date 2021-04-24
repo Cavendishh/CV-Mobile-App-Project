@@ -17,6 +17,7 @@ import {
   IonImg,
   IonIcon,
   IonInput,
+  useIonToast,
 } from '@ionic/react'
 import {
   keyOutline,
@@ -36,22 +37,26 @@ const SignUp = () => {
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
+  const [error, clearError] = useIonToast()
   const history = useHistory()
 
   const { signup } = useAuth()
 
   const handleSignUp = async (event) => {
-    event.preventDefault()
-
     try {
       setLoading(true)
-      setError('')
       await signup(email, password)
       history.push('/login')
     } catch (err) {
-      console.log('Failed to Sing Up. Error: ', err)
-      setError(err)
+      console.log('Failed to Sign Up.')
+
+      if (err.message.includes('"email" must be a valid string')) {
+        error('Email not valid', 3000)
+      } else if (err.message.includes('"password" must be a valid string')) {
+        error('Password not valid', 3000)
+      } else {
+        error(err.message, 3000)
+      }
     }
     setLoading(false)
   }
@@ -63,9 +68,6 @@ const SignUp = () => {
   const changePassword = (event) => {
     setPassword(event.detail.value)
   }
-
-  email && console.log('Email: ', email)
-  password && console.log('Password: ', password)
 
   return (
     <>
@@ -84,11 +86,6 @@ const SignUp = () => {
                 <IonImg src={coverImg} />
                 <IonCardTitle className='cardTitle'>
                   Sign Up below to access my CV
-                  {error && (
-                    <h1>
-                      <b>Something went wrong</b>
-                    </h1>
-                  )}
                 </IonCardTitle>
               </IonCardHeader>
               <IonCardContent>
@@ -131,7 +128,7 @@ const SignUp = () => {
                   </IonItem>
 
                   <Link to='/login'>
-                    <IonButton expand='block'>
+                    <IonButton expand='block' disabled={loading}>
                       <IonIcon src={keyOutline} />
                       Return to Login
                     </IonButton>

@@ -55,13 +55,20 @@ const App = () => (
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-            <PrivateRoute exact path='/' component={Profile} />
+            {/* <PrivateRoute exact path='/' component={Profile} />
             <PrivateRoute exact path='/profile' component={Profile} />
             <PrivateRoute exact path='/education' component={Education} />
             <PrivateRoute exact path='/experience' component={Experience} />
             <PrivateRoute exact path='/skills' component={Skills} />
             <PrivateRoute exact path='/projects' component={Projects} />
-            <PrivateRoute exact path='/contact' component={Contact} />
+            <PrivateRoute exact path='/contact' component={Contact} /> */}
+            <Route exact path='/' component={Profile} />
+            <Route exact path='/profile' component={Profile} />
+            <Route exact path='/education' component={Education} />
+            <Route exact path='/experience' component={Experience} />
+            <Route exact path='/skills' component={Skills} />
+            <Route exact path='/projects' component={Projects} />
+            <Route exact path='/contact' component={Contact} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
           </IonRouterOutlet>

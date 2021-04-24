@@ -17,6 +17,7 @@ import {
   IonImg,
   IonIcon,
   IonInput,
+  useIonToast,
 } from '@ionic/react'
 import {
   keyOutline,
@@ -35,22 +36,26 @@ const Login = () => {
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
+  const [error, clearError] = useIonToast()
   const history = useHistory()
 
   const { login } = useAuth()
 
-  const handleLogin = async (event) => {
-    event.preventDefault()
-
+  const handleLogin = async () => {
     try {
       setLoading(true)
-      setError('')
       await login(email, password)
       history.push('/profile')
     } catch (err) {
-      console.log('Failed to Login. Error: ', err)
-      setError(err)
+      console.log('Failed to Login.')
+
+      if (err.message.includes('"email" must be a valid string')) {
+        error('Email not valid', 3000)
+      } else if (err.message.includes('"password" must be a valid string')) {
+        error('Password not valid', 3000)
+      } else {
+        error(err.message, 3000)
+      }
     }
     setLoading(false)
   }
@@ -62,9 +67,6 @@ const Login = () => {
   const changePassword = (event) => {
     setPassword(event.detail.value)
   }
-
-  email && console.log('Email: ', email)
-  password && console.log('Password: ', password)
 
   return (
     <>
@@ -78,16 +80,12 @@ const Login = () => {
         </IonHeader>
         <IonContent>
           <IonGrid>
+            {/* {error.length && <ErrorToast message={error} />} */}
             <IonCard>
               <IonCardHeader>
                 <IonImg src={coverImg} />
                 <IonCardTitle className='cardTitle'>
                   Welcome to my CV!
-                  {error && (
-                    <h1>
-                      <b>Something went wrong</b>
-                    </h1>
-                  )}
                 </IonCardTitle>
               </IonCardHeader>
               <IonCardContent>
