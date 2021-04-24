@@ -262,3 +262,9 @@ http://ionicframework.com/docs/theming/ */
   color: black;
   font-size: 16px;
 }
+
+.bulletPoint {
+  display: list-item;                                  
+  list-style-type: disc;
+  list-style-position: inside;
+}

@@ -12,6 +12,7 @@ import {
   IonCardSubtitle,
   IonList,
   IonItem,
+  IonText,
 } from '@ionic/react'
 import './Experience.css'
 import Menu from '../../components/Menu/Menu'
@@ -39,53 +40,26 @@ const Experience = () => {
                   Junior Software Engineer
                 </IonCardTitle>
                 <IonCardSubtitle className='cardSub'>
-                  Workfellow, Finland
+                  <i>Workfellow, Finland</i>
                 </IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>
                 <IonList>
                   <IonItem>
-                    - Development as a Fullstack engineer using modern
-                    technologies
-                  </IonItem>
-                  <IonItem>- Working with Microsoft ecosystem (Azure)</IonItem>
-                  <IonItem>- Setting up development pipelines</IonItem>
-                </IonList>
-              </IonCardContent>
-            </IonCard>
-
-            <IonCard>
-              <IonCardHeader>
-                <IonCardSubtitle className='cardYear'>
-                  2018 - 2019
-                </IonCardSubtitle>
-                <IonCardTitle className='cardTitle'>Electrician</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
-                  Finavia Oyj, Finland, Helsinki-Vantaa airport
-                </IonCardSubtitle>
-              </IonCardHeader>
-              <IonCardContent>
-                <IonList>
-                  <IonItem>
-                    - Installation, cabling, maintenance, troubleshooting, and
-                    commissioning of different IT-appliances
+                    <IonText className='bulletPoint'>
+                      Development as a Fullstack engineer using modern
+                      technologies
+                    </IonText>
                   </IonItem>
                   <IonItem>
-                    - Executing and/or leading many different sized projects
+                    <IonText className='bulletPoint'>
+                      Working with Microsoft ecosystem (Azure)
+                    </IonText>
                   </IonItem>
                   <IonItem>
-                    - Maintenance, troubleshooting, commissioning, and
-                    electrical installations related mostly towards industrial
-                    electricitys
-                  </IonItem>
-                  <IonItem>
-                    - Working on high voltage circuits and appliances located at
-                    runway and apron areas
-                  </IonItem>
-                  <IonItem>- Annual and monthly inspections</IonItem>
-                  <IonItem>
-                    - I was part of the Ground Power Systems Team at Aviation
-                    Electricity
+                    <IonText className='bulletPoint'>
+                      Setting up development pipelines
+                    </IonText>
                   </IonItem>
                 </IonList>
               </IonCardContent>
@@ -98,17 +72,80 @@ const Experience = () => {
                 </IonCardSubtitle>
                 <IonCardTitle className='cardTitle'>Electrician</IonCardTitle>
                 <IonCardSubtitle className='cardSub'>
-                  Finavia Oyj, Finland, Helsinki-Vantaa airport
+                  <i>Finavia Oyj, Finland, Helsinki-Vantaa airport</i>
                 </IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>
                 <IonList>
-                  <IonItem>- Speaking and performing at conventions</IonItem>
                   <IonItem>
-                    - Teaching English to people all the way from 5 to 30 years
-                    old
+                    <IonText className='bulletPoint'>
+                      Installation, cabling, maintenance, troubleshooting, and
+                      commissioning of different IT-appliances
+                    </IonText>
                   </IonItem>
-                  <IonItem>- Private teaching and tutoring</IonItem>
+                  <IonItem>
+                    <IonText className='bulletPoint'>
+                      Executing and/or leading many different sized projects
+                    </IonText>
+                  </IonItem>
+                  <IonItem>
+                    <IonText className='bulletPoint'>
+                      Maintenance, troubleshooting, commissioning, and
+                      electrical installations related mostly towards industrial
+                      electricitys
+                    </IonText>
+                  </IonItem>
+                  <IonItem>
+                    <IonText className='bulletPoint'>
+                      Working on high voltage circuits and appliances located at
+                      runway and apron areas
+                    </IonText>
+                  </IonItem>
+                  <IonItem>
+                    <IonText className='bulletPoint'>
+                      Annual and monthly inspections
+                    </IonText>
+                  </IonItem>
+                  <IonItem>
+                    <IonText className='bulletPoint'>
+                      I was part of the Ground Power Systems Team at Aviation
+                      Electricity
+                    </IonText>
+                  </IonItem>
+                </IonList>
+              </IonCardContent>
+            </IonCard>
+
+            <IonCard>
+              <IonCardHeader>
+                <IonCardSubtitle className='cardYear'>
+                  2018 - 2019
+                </IonCardSubtitle>
+                <IonCardTitle className='cardTitle'>
+                  English Teacher
+                </IonCardTitle>
+                <IonCardSubtitle className='cardSub'>
+                  <i>New Way Company, Vietnam, Hanoi</i>
+                </IonCardSubtitle>
+              </IonCardHeader>
+              <IonCardContent>
+                <IonList>
+                  <IonItem>
+                    <IonText className='bulletPoint'>
+                      Speaking and performing at conventions
+                    </IonText>
+                  </IonItem>
+                  <IonItem>
+                    <IonText className='bulletPoint'>
+                      Teaching English to people all the way from 5 to 30 years
+                      old
+                    </IonText>
+                  </IonItem>
+                  <IonItem>
+                    <IonText className='bulletPoint'>
+                      Private teaching and tutoring
+                    </IonText>
+                  </IonItem>
                 </IonList>
               </IonCardContent>
             </IonCard>
@@ -120,23 +157,33 @@ const Experience = () => {
                 </IonCardSubtitle>
                 <IonCardTitle className='cardTitle'>Electrician</IonCardTitle>
                 <IonCardSubtitle className='cardSub'>
-                  Finavia Oyj, Finland, Helsinki-Vantaa airport
+                  <i>Finavia Oyj, Finland, Helsinki-Vantaa airport</i>
                 </IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>
                 <IonList>
                   <IonItem>
-                    - Very diverse tasks related to industrial and airport
-                    electricity
+                    <IonText className='bulletPoint'>
+                      Very diverse tasks related to industrial and airport
+                      electricity
+                    </IonText>
                   </IonItem>
                   <IonItem>
-                    - Troubleshooting and maintenance of high voltage circuits
-                    and appliances located at runway and apron areas
+                    <IonText className='bulletPoint'>
+                      Troubleshooting and maintenance of high voltage circuits
+                      and appliances located at runway and apron areas
+                    </IonText>
                   </IonItem>
-                  <IonItem>- Working in many different projects</IonItem>
                   <IonItem>
-                    - I was part of the Airfield Lighting Team at Aviation
-                    Electricity
+                    <IonText className='bulletPoint'>
+                      Working in many different projects
+                    </IonText>
+                  </IonItem>
+                  <IonItem>
+                    <IonText className='bulletPoint'>
+                      I was part of the Airfield Lighting Team at Aviation
+                      Electricity
+                    </IonText>
                   </IonItem>
                 </IonList>
               </IonCardContent>
@@ -147,20 +194,24 @@ const Experience = () => {
                 <IonCardSubtitle className='cardYear'>
                   2020 - 2021
                 </IonCardSubtitle>
-                <IonCardTitle className='cardTitle'>Jenkins ry</IonCardTitle>
+                <IonCardTitle className='cardTitle'>
+                  Member of Board - Company Relations
+                </IonCardTitle>
                 <IonCardSubtitle className='cardSub'>
-                  Business Information Technology Student Association of Laurea
+                  <i>
+                    Business Information Technology Student Association of
+                    Laurea
+                  </i>
                 </IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>
                 <IonItem>
-                  Member of the board. I am in charge of company relations. We
-                  work closely with Laurea BIT-students, different schools, and
-                  many companies. I help companies find students for open job
-                  positions.; opening a dialogue between companies, students,
-                  and schools; arranging excursions to IT-companies like
-                  Frantic, CGI &#38; etc.; and doing sponsorships with companies
-                  that benefit both parties.
+                  I am in charge of company relations. We work closely with
+                  Laurea BIT-students, different schools, and many companies. I
+                  help companies find students for open job positions.; opening
+                  a dialogue between companies, students, and schools; arranging
+                  excursions to IT-companies like Frantic, CGI &#38; etc.; and
+                  doing sponsorships with companies that benefit both parties.
                 </IonItem>
               </IonCardContent>
             </IonCard>
