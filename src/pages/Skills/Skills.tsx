@@ -43,31 +43,53 @@ const Skills = () => {
           <IonGrid>
             <IonCard>
               <IonCardHeader>
-                <IonCardTitle className='cardTitle'>Soft Skills</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
-                  My soft skills can be divided into five strengths.
+                <IonCardTitle className='alignCenter incFontSize bottomMargin'>
+                  Soft Skills
+                </IonCardTitle>
+                <IonCardSubtitle className='alignCenter'>
+                  My soft skills can be divided into five core strengths.
                 </IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent>
                 <IonList>
                   <IonItem>
-                    <IonIcon icon={bookOutline} />
+                    <IonIcon
+                      icon={bookOutline}
+                      className='iconPaddingRight'
+                      color='secondary'
+                    />
                     Fast learner
                   </IonItem>
                   <IonItem>
-                    <IonIcon icon={peopleOutline} />
+                    <IonIcon
+                      icon={peopleOutline}
+                      className='iconPaddingRight'
+                      color='secondary'
+                    />
                     Team player
                   </IonItem>
                   <IonItem>
-                    <IonIcon icon={diamondOutline} />
+                    <IonIcon
+                      icon={diamondOutline}
+                      className='iconPaddingRight'
+                      color='secondary'
+                    />
                     Ambitious
                   </IonItem>
                   <IonItem>
-                    <IonIcon icon={terminalOutline} />
+                    <IonIcon
+                      icon={terminalOutline}
+                      className='iconPaddingRight'
+                      color='secondary'
+                    />
                     Loves challenges
                   </IonItem>
                   <IonItem>
-                    <IonIcon icon={chatbubblesOutline} />
+                    <IonIcon
+                      icon={chatbubblesOutline}
+                      className='iconPaddingRight'
+                      color='secondary'
+                    />
                     Leadership
                   </IonItem>
                 </IonList>
@@ -76,10 +98,10 @@ const Skills = () => {
 
             <IonCard>
               <IonCardHeader>
-                <IonCardTitle className='cardTitle'>
+                <IonCardTitle className='alignCenter incFontSize bottomMargin'>
                   Technical Skills
                 </IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardSubtitle className='alignCenter'>
                   My skills have been acquired from many different courses that
                   I have done in my free time and school. The main focus of my
                   studies currently is web development technologies, preferably
@@ -98,7 +120,7 @@ const Skills = () => {
                         <p>HTML</p>
                       </IonCol>
                     </IonRow>
-                    <IonProgressBar value={1.0} />
+                    <IonProgressBar value={1.0} color='secondary' />
                   </IonItem>
 
                   <IonItem>
@@ -107,7 +129,7 @@ const Skills = () => {
                         <p>CSS</p>
                       </IonCol>
                     </IonRow>
-                    <IonProgressBar value={0.68} />
+                    <IonProgressBar value={0.68} color='secondary' />
                   </IonItem>
 
                   <IonItem>
@@ -116,7 +138,7 @@ const Skills = () => {
                         <p>JavaScript</p>
                       </IonCol>
                     </IonRow>
-                    <IonProgressBar value={0.79} />
+                    <IonProgressBar value={0.79} color='secondary' />
                   </IonItem>
 
                   <IonItem>
@@ -125,7 +147,7 @@ const Skills = () => {
                         <p>Node.js</p>
                       </IonCol>
                     </IonRow>
-                    <IonProgressBar value={0.5} />
+                    <IonProgressBar value={0.5} color='secondary' />
                   </IonItem>
 
                   <IonItem>
@@ -134,7 +156,7 @@ const Skills = () => {
                         <p>React</p>
                       </IonCol>
                     </IonRow>
-                    <IonProgressBar value={0.45} />
+                    <IonProgressBar value={0.45} color='secondary' />
                   </IonItem>
 
                   <IonItem>
@@ -143,7 +165,7 @@ const Skills = () => {
                         <p>Express.js</p>
                       </IonCol>
                     </IonRow>
-                    <IonProgressBar value={0.55} />
+                    <IonProgressBar value={0.55} color='secondary' />
                   </IonItem>
 
                   <IonItem>
@@ -152,7 +174,7 @@ const Skills = () => {
                         <p>MongoDB</p>
                       </IonCol>
                     </IonRow>
-                    <IonProgressBar value={0.4} />
+                    <IonProgressBar value={0.4} color='secondary' />
                   </IonItem>
 
                   <IonItem>
@@ -161,15 +183,16 @@ const Skills = () => {
                         <p>Mongoose</p>
                       </IonCol>
                     </IonRow>
-                    <IonProgressBar value={0.5} />
+                    <IonProgressBar value={0.5} color='secondary' />
                   </IonItem>
                 </IonList>
-                <IonCardSubtitle className='cardSub'>
-                  Also familiar with: Single Page Applications (SPA), Java,
-                  AJAJ/AJAX, APIs, REST, HTTP, axios, cloud databases, SQL,
-                  schema design, templating (EJS), cookies &#38; sessions,
-                  common security issues (injections, XSS, etc.), authentication
-                  &#38; authorization, responsive design, best practices of
+                <IonCardSubtitle className='alignCenter'>
+                  Also familiar with:
+                  <br /> Single Page Applications (SPA), Java, AJAJ/AJAX, APIs,
+                  REST, HTTP, axios, cloud databases, SQL, schema design,
+                  templating (EJS), cookies &#38; sessions, common security
+                  issues (injections, XSS, etc.), authentication &#38;
+                  authorization, responsive design, best practices of
                   developers, and deployment of applications.
                 </IonCardSubtitle>
               </IonCardContent>
