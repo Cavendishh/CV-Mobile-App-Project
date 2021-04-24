@@ -20,7 +20,7 @@ import {
 import {
   bookOutline,
   peopleOutline,
-  buildOutline,
+  terminalOutline,
   diamondOutline,
   chatbubblesOutline,
 } from 'ionicons/icons'
@@ -63,7 +63,7 @@ const Skills = () => {
                     Ambitious
                   </IonItem>
                   <IonItem>
-                    <IonIcon icon={buildOutline} />
+                    <IonIcon icon={terminalOutline} />
                     Loves challenges
                   </IonItem>
                   <IonItem>
