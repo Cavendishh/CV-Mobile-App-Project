@@ -22,7 +22,7 @@ const Education = () => {
       <IonPage>
         <Menu />
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar className='secondaryColor'>
             <MenuButton />
             <IonTitle>Education</IonTitle>
           </IonToolbar>
@@ -42,7 +42,7 @@ const Education = () => {
                 </IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent className='topMargin'>
-                <IonText className='fontSizeColorBlack'>
+                <IonText>
                   Without a doubt, this online bootcamp is the most
                   comprehensive and effective online course on the market
                   currently that doesn't cut any corners. Udemy's most popular
@@ -67,7 +67,7 @@ const Education = () => {
                 </IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent className='topMargin'>
-                <IonText className='fontSizeColorBlack'>
+                <IonText>
                   Specializing in web development technologies. The BIT program
                   provides students with the theoretical and practical knowledge
                   required to operate in the field of ICT. The program works in
@@ -93,7 +93,7 @@ const Education = () => {
                 </IonCardSubtitle>
               </IonCardHeader>
               <IonCardContent className='topMargin'>
-                <IonText className='fontSizeColorBlack'>
+                <IonText>
                   Study Programme/Competence Area in Electrical and Automation
                   Engineering, Electrician. I got granted a scholarship for my
                   achievements in studying.

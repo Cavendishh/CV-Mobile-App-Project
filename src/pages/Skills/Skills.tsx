@@ -34,7 +34,7 @@ const Skills = () => {
       <IonPage>
         <Menu />
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar className='secondaryColor'>
             <MenuButton />
             <IonTitle>Skills</IonTitle>
           </IonToolbar>

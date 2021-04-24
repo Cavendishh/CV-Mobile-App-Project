@@ -32,7 +32,7 @@ const Contact = () => {
       <IonPage>
         <Menu />
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar className='secondaryColor'>
             <MenuButton />
             <IonTitle>Contact</IonTitle>
           </IonToolbar>

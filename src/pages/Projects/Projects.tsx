@@ -28,7 +28,7 @@ const Projects = () => {
       <IonPage>
         <Menu />
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar className='secondaryColor'>
             <MenuButton />
             <IonTitle>Projects</IonTitle>
           </IonToolbar>

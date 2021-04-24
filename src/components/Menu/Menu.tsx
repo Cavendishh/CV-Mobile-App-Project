@@ -42,7 +42,7 @@ const Menu = () => {
     <>
       <IonMenu side='start' contentId='content'>
         <IonHeader>
-          <IonToolbar color='primary'>
+          <IonToolbar color='secondary'>
             <IonTitle>Menu</IonTitle>
           </IonToolbar>
         </IonHeader>
@@ -51,62 +51,60 @@ const Menu = () => {
             <IonItem>
               <IonIcon icon={accessibilityOutline} />
               <Link to='/profile'>
-                <IonButton fill='clear'>Profile</IonButton>
+                <IonButton fill='clear' color='secondary'>
+                  Profile
+                </IonButton>
               </Link>
             </IonItem>
 
             <IonItem>
               <IonIcon icon={libraryOutline} />
               <Link to='/education'>
-                <IonButton fill='clear'>Education</IonButton>
+                <IonButton fill='clear' color='secondary'>
+                  Education
+                </IonButton>
               </Link>
             </IonItem>
 
             <IonItem>
               <IonIcon icon={newspaperOutline} />
               <Link to='/experience'>
-                <IonButton fill='clear'>Experience</IonButton>
+                <IonButton fill='clear' color='secondary'>
+                  Experience
+                </IonButton>
               </Link>
             </IonItem>
 
             <IonItem>
               <IonIcon icon={barChartOutline} />
               <Link to='/skills'>
-                <IonButton fill='clear'>Skills</IonButton>
+                <IonButton fill='clear' color='secondary'>
+                  Skills
+                </IonButton>
               </Link>
             </IonItem>
 
             <IonItem>
               <IonIcon icon={folderOpenOutline} />
               <Link to='/projects'>
-                <IonButton fill='clear'>Projects</IonButton>
+                <IonButton fill='clear' color='secondary'>
+                  Projects
+                </IonButton>
               </Link>
             </IonItem>
 
             <IonItem>
               <IonIcon icon={chatboxOutline} />
               <Link to='/contact'>
-                <IonButton fill='clear'>Contact</IonButton>
+                <IonButton fill='clear' color='secondary'>
+                  Contact
+                </IonButton>
               </Link>
             </IonItem>
 
             <IonItem>
-              <IonIcon icon={logInOutline} />
-              <Link to='/login'>
-                <IonButton fill='clear'>Login</IonButton>
-              </Link>
-            </IonItem>
-
-            <IonItem>
-              <IonIcon icon={logOutOutline} />
-              <Link to='/signup'>
-                <IonButton fill='clear'>Sign Up</IonButton>
-              </Link>
-            </IonItem>
-
-            <IonItem>
-              <IonIcon icon={logOutOutline} />
-              <IonButton fill='clear' onClick={handleLogout}>
+              <IonIcon icon={logOutOutline} className='tinyPaddingRight ' />
+              <IonButton fill='clear' onClick={handleLogout} color='danger'>
                 Log Out
               </IonButton>
             </IonItem>

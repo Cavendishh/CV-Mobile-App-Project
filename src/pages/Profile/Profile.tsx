@@ -23,7 +23,7 @@ const Profile = () => {
       <IonPage>
         <Menu />
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar className='secondaryColor'>
             <MenuButton />
             <IonTitle>Profile</IonTitle>
           </IonToolbar>

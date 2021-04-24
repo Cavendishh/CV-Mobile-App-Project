@@ -24,7 +24,7 @@ const Experience = () => {
       <IonPage>
         <Menu />
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar className='secondaryColor'>
             <MenuButton />
             <IonTitle>Experience</IonTitle>
           </IonToolbar>
@@ -33,13 +33,9 @@ const Experience = () => {
           <IonGrid>
             <IonCard>
               <IonCardHeader>
-                <IonCardSubtitle className='cardYear'>
-                  2021 -&#62;
-                </IonCardSubtitle>
-                <IonCardTitle className='cardTitle'>
-                  Junior Software Engineer
-                </IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardSubtitle>2021 -&#62;</IonCardSubtitle>
+                <IonCardTitle>Junior Software Engineer</IonCardTitle>
+                <IonCardSubtitle>
                   <i>Workfellow, Finland</i>
                 </IonCardSubtitle>
               </IonCardHeader>
@@ -67,11 +63,9 @@ const Experience = () => {
 
             <IonCard>
               <IonCardHeader>
-                <IonCardSubtitle className='cardYear'>
-                  2018 - 2019
-                </IonCardSubtitle>
-                <IonCardTitle className='cardTitle'>Electrician</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardSubtitle>2018 - 2019</IonCardSubtitle>
+                <IonCardTitle>Electrician</IonCardTitle>
+                <IonCardSubtitle>
                   <i>Finavia Oyj, Finland, Helsinki-Vantaa airport</i>
                 </IonCardSubtitle>
               </IonCardHeader>
@@ -118,13 +112,9 @@ const Experience = () => {
 
             <IonCard>
               <IonCardHeader>
-                <IonCardSubtitle className='cardYear'>
-                  2018 - 2019
-                </IonCardSubtitle>
-                <IonCardTitle className='cardTitle'>
-                  English Teacher
-                </IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardSubtitle>2018 - 2019</IonCardSubtitle>
+                <IonCardTitle>English Teacher</IonCardTitle>
+                <IonCardSubtitle>
                   <i>New Way Company, Vietnam, Hanoi</i>
                 </IonCardSubtitle>
               </IonCardHeader>
@@ -152,11 +142,9 @@ const Experience = () => {
 
             <IonCard>
               <IonCardHeader>
-                <IonCardSubtitle className='cardYear'>
-                  2018 - 2019
-                </IonCardSubtitle>
-                <IonCardTitle className='cardTitle'>Electrician</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardSubtitle>2018 - 2019</IonCardSubtitle>
+                <IonCardTitle>Electrician</IonCardTitle>
+                <IonCardSubtitle>
                   <i>Finavia Oyj, Finland, Helsinki-Vantaa airport</i>
                 </IonCardSubtitle>
               </IonCardHeader>
@@ -191,13 +179,9 @@ const Experience = () => {
 
             <IonCard>
               <IonCardHeader>
-                <IonCardSubtitle className='cardYear'>
-                  2020 - 2021
-                </IonCardSubtitle>
-                <IonCardTitle className='cardTitle'>
-                  Member of Board - Company Relations
-                </IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardSubtitle>2020 - 2021</IonCardSubtitle>
+                <IonCardTitle>Member of Board - Company Relations</IonCardTitle>
+                <IonCardSubtitle>
                   <i>
                     Business Information Technology Student Association of
                     Laurea

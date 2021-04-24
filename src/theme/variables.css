@@ -247,6 +247,10 @@ http://ionicframework.com/docs/theming/ */
   padding-left: 10px;
 }
 
+.tinyPaddingRight {
+  padding-right: 5px
+}
+
 .titleMarginFont {
   margin-top: 20px;
   font-size: 30px
@@ -255,7 +259,6 @@ http://ionicframework.com/docs/theming/ */
 .cardSubCenter {
   text-align: center;
   width: 100%;
-  /* background-color: red; */
 }
 
 .topMargin {
@@ -266,19 +269,17 @@ http://ionicframework.com/docs/theming/ */
   margin-bottom: 25px;
 }
 
-.fontSizeColorBlack {
-  color: black;
-  font-size: 16px;
-}
+
 
 .bulletPoint {
   display: list-item;                                  
   list-style-type: disc;
   list-style-position: inside;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .alignCenter {
-  justify-content: center;
   text-align: center;
 }
 
@@ -288,4 +289,8 @@ http://ionicframework.com/docs/theming/ */
 
 .tinyIncFontSize {
   font-size: 25px;
+}
+
+.secondaryColor {
+  --background: var(--ion-color-secondary)
 }

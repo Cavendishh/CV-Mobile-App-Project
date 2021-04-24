@@ -103,16 +103,6 @@ const App = () => (
               <IonIcon icon={chatboxOutline} />
               <IonLabel>Contact</IonLabel>
             </IonTabButton>
-
-            <IonTabButton tab='login' href='/login'>
-              <IonIcon icon={logInOutline} />
-              <IonLabel>Login</IonLabel>
-            </IonTabButton>
-
-            <IonTabButton tab='signup' href='/signup'>
-              <IonIcon icon={logOutOutline} />
-              <IonLabel>Sign Up</IonLabel>
-            </IonTabButton>
           </IonTabBar>
         </IonTabs>
       </IonReactRouter>
