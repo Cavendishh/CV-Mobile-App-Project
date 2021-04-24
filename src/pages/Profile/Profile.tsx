@@ -32,7 +32,7 @@ const Profile = () => {
           <IonGrid>
             <IonCard>
               <IonCardHeader>
-                <IonImg src={profileImg}></IonImg>
+                <IonImg src={profileImg} />
                 <IonCardSubtitle>Junior Software Engineer</IonCardSubtitle>
                 <IonCardTitle>Janne Kavander</IonCardTitle>
               </IonCardHeader>
