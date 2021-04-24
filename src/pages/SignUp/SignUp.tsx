@@ -35,10 +35,24 @@ import { useAuth } from '../../contexts/AuthContext'
 const SignUp = () => {
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const { signup } = useAuth()
 
-  const handleSubmit = (event) => {}
+  const handleSignUp = async (event) => {
+    event.preventDefault()
+
+    try {
+      setLoading(true)
+      setError('')
+      await signup(email, password)
+    } catch (err) {
+      console.log('Failed to sign up. Error: ', err)
+      setError(err)
+    }
+    setLoading(false)
+  }
 
   const changeEmail = (event) => {
     setEmail(event.detail.value)
@@ -68,6 +82,11 @@ const SignUp = () => {
                 <IonImg src={coverImg} />
                 <IonCardTitle className='cardTitle'>
                   Sign Up below to access my CV
+                  {error && (
+                    <h1>
+                      <b>Something went wrong</b>
+                    </h1>
+                  )}
                 </IonCardTitle>
               </IonCardHeader>
               <IonCardContent>
@@ -94,7 +113,11 @@ const SignUp = () => {
                     />
                   </IonItem>
 
-                  <IonButton expand='block'>
+                  <IonButton
+                    expand='block'
+                    onClick={handleSignUp}
+                    disabled={loading}
+                  >
                     <IonIcon src={personAddOutline} />
                     Sign Up
                   </IonButton>
