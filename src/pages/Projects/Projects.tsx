@@ -15,12 +15,12 @@ import {
 import './Projects.css'
 import Menu from '../../components/Menu/Menu'
 import MenuButton from '../../components/Menu/MenuButton'
-import project0 from '../../assets/Projects/Project-thumbnail-0.png'
-import project1 from '../../assets/Projects/Project-thumbnail-1.png'
-import project2 from '../../assets/Projects/Project-thumbnail-2.png'
-import project3 from '../../assets/Projects/Project-thumbnail-3.png'
-import project4 from '../../assets/Projects/Project-thumbnail-4.png'
-import project5 from '../../assets/Projects/Project-thumbnail-5.png'
+import project0 from '../../assets/Projects/project0.png'
+import project1 from '../../assets/Projects/project1.png'
+import project2 from '../../assets/Projects/project2.png'
+import project3 from '../../assets/Projects/project3.png'
+import project4 from '../../assets/Projects/project4.png'
+import project5 from '../../assets/Projects/project5.png'
 
 const Projects = () => {
   return (
@@ -38,8 +38,10 @@ const Projects = () => {
             <IonCard>
               <IonCardHeader>
                 <IonImg src={project0} />
-                <IonCardTitle className='cardTitle'>YelpCamp</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardTitle className='alignCenter tinyIncFontSize'>
+                  YelpCamp
+                </IonCardTitle>
+                <IonCardSubtitle className='alignCenter bottomMargin'>
                   JavaScript, Node.js, Express.js, MongoDB, Mongoose, Cloudify,
                   EJS, Authentication, Geocoding
                 </IonCardSubtitle>
@@ -58,8 +60,10 @@ const Projects = () => {
             <IonCard>
               <IonCardHeader>
                 <IonImg src={project1} />
-                <IonCardTitle className='cardTitle'>Github Search</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardTitle className='alignCenter tinyIncFontSize'>
+                  Github Search
+                </IonCardTitle>
+                <IonCardSubtitle className='alignCenter bottomMargin'>
                   React, React Router, React Bootstrap, Context API, Node.js,
                   Axios, Express.js
                 </IonCardSubtitle>
@@ -77,8 +81,10 @@ const Projects = () => {
             <IonCard>
               <IonCardHeader>
                 <IonImg src={project2} />
-                <IonCardTitle className='cardTitle'>Ticket System</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardTitle className='alignCenter tinyIncFontSize'>
+                  Ticket System
+                </IonCardTitle>
+                <IonCardSubtitle className='alignCenter bottomMargin'>
                   React, Redux, Context API, Materialize, Node.js
                 </IonCardSubtitle>
               </IonCardHeader>
@@ -94,8 +100,10 @@ const Projects = () => {
             <IonCard>
               <IonCardHeader>
                 <IonImg src={project3} />
-                <IonCardTitle className='cardTitle'>Phonebook</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardTitle className='alignCenter tinyIncFontSize'>
+                  Phonebook
+                </IonCardTitle>
+                <IonCardSubtitle className='alignCenter bottomMargin'>
                   React, React Bootstrap, Node.js, Express.js, Axios, MongoDB,
                   Mongoose
                 </IonCardSubtitle>
@@ -115,8 +123,10 @@ const Projects = () => {
             <IonCard>
               <IonCardHeader>
                 <IonImg src={project4} />
-                <IonCardTitle className='cardTitle'>Task Manager</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardTitle className='alignCenter tinyIncFontSize'>
+                  Task Manager
+                </IonCardTitle>
+                <IonCardSubtitle className='alignCenter bottomMargin'>
                   JavaScript, HTML, CSS
                 </IonCardSubtitle>
               </IonCardHeader>
@@ -133,8 +143,10 @@ const Projects = () => {
             <IonCard>
               <IonCardHeader>
                 <IonImg src={project5} />
-                <IonCardTitle className='cardTitle'>Covid Tracker</IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+                <IonCardTitle className='alignCenter tinyIncFontSize'>
+                  Covid Tracker
+                </IonCardTitle>
+                <IonCardSubtitle className='alignCenter bottomMargin'>
                   JavaScript, HTML, CSS
                 </IonCardSubtitle>
               </IonCardHeader>
