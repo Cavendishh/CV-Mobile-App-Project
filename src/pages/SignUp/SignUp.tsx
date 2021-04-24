@@ -1,10 +1,10 @@
+import React, { useState } from 'react'
 import {
   IonContent,
   IonHeader,
   IonPage,
   IonTitle,
   IonToolbar,
-  IonText,
   IonGrid,
   IonCardContent,
   IonCard,
@@ -30,8 +30,27 @@ import { Link } from 'react-router-dom'
 import Menu from '../../components/Menu/Menu'
 import MenuButton from '../../components/Menu/MenuButton'
 import coverImg from '../../assets/Profile/cover-img.jpg'
+import { useAuth } from '../../contexts/AuthContext'
 
-const Register = () => {
+const SignUp = () => {
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+
+  const { signup } = useAuth()
+
+  const handleSubmit = (event) => {}
+
+  const changeEmail = (event) => {
+    setEmail(event.detail.value)
+  }
+
+  const changePassword = (event) => {
+    setPassword(event.detail.value)
+  }
+
+  email && console.log('Email: ', email)
+  password && console.log('Password: ', password)
+
   return (
     <>
       <IonPage>
@@ -63,9 +82,7 @@ const Register = () => {
                     <IonIcon src={mailOutline} />
                     <IonInput
                       placeholder='Set Email'
-                      onIonChange={(e) =>
-                        console.log('Email: ', e.detail.value)
-                      }
+                      onIonChange={changeEmail}
                     />
                   </IonItem>
 
@@ -73,9 +90,7 @@ const Register = () => {
                     <IonIcon src={lockClosedOutline} />
                     <IonInput
                       placeholder='Set Password'
-                      onIonChange={(e) =>
-                        console.log('Password: ', e.detail.value)
-                      }
+                      onIonChange={changePassword}
                     />
                   </IonItem>
 
@@ -106,4 +121,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default SignUp
