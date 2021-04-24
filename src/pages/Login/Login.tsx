@@ -77,6 +77,7 @@ const Login = () => {
                     />
                     <IonInput
                       placeholder='Password'
+                      type='password'
                       onIonChange={changePassword}
                     />
                   </IonItem>

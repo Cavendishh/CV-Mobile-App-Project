@@ -82,6 +82,7 @@ const SignUp = () => {
                     <IonInput
                       placeholder='Set Password'
                       onIonChange={changePassword}
+                      type='password'
                     />
                   </IonItem>
 

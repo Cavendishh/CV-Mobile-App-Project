@@ -11,8 +11,6 @@ import {
 } from '@ionic/react'
 import {
   libraryOutline,
-  logInOutline,
-  logOutOutline,
   barChartOutline,
   accessibilityOutline,
   newspaperOutline,
@@ -28,7 +26,7 @@ import Projects from './pages/Projects/Projects'
 import Contact from './pages/Contact/Contact'
 import Login from './pages/Login/Login'
 import SignUp from './pages/SignUp/SignUp'
-import { AuthProvider } from './contexts/AuthContext'
+import { useAuth } from './contexts/AuthContext'
 import PrivateRoute from './PrivateRoute'
 
 /* Core CSS required for Ionic components to work properly */
@@ -50,85 +48,106 @@ import '@ionic/react/css/display.css'
 /* Theme variables */
 import './theme/variables.css'
 
-const App = () => (
-  <AuthProvider>
-    <IonApp>
-      <IonReactRouter>
-        <IonTabs>
+const App = () => {
+  const { currentUser } = useAuth()
+
+  if (!currentUser) {
+    return (
+      <IonApp>
+        <IonReactRouter>
           <IonRouterOutlet>
-            {/* <PrivateRoute exact path='/' component={Profile} />
+            <PrivateRoute exact path='/' component={Profile} />
             <PrivateRoute exact path='/profile' component={Profile} />
             <PrivateRoute exact path='/education' component={Education} />
             <PrivateRoute exact path='/experience' component={Experience} />
             <PrivateRoute exact path='/skills' component={Skills} />
             <PrivateRoute exact path='/projects' component={Projects} />
-            <PrivateRoute exact path='/contact' component={Contact} /> */}
-            <Route exact path='/' component={Profile} />
-            <Route exact path='/profile' component={Profile} />
-            <Route exact path='/education' component={Education} />
-            <Route exact path='/experience' component={Experience} />
-            <Route exact path='/skills' component={Skills} />
-            <Route exact path='/projects' component={Projects} />
-            <Route exact path='/contact' component={Contact} />
+            <PrivateRoute exact path='/contact' component={Contact} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
+            <Redirect to='/' />
           </IonRouterOutlet>
+        </IonReactRouter>
+      </IonApp>
+    )
+  } else {
+    return (
+      <IonApp>
+        <IonReactRouter>
+          <IonTabs>
+            <IonRouterOutlet>
+              <PrivateRoute exact path='/' component={Profile} />
+              <PrivateRoute exact path='/profile' component={Profile} />
+              <PrivateRoute exact path='/education' component={Education} />
+              <PrivateRoute exact path='/experience' component={Experience} />
+              <PrivateRoute exact path='/skills' component={Skills} />
+              <PrivateRoute exact path='/projects' component={Projects} />
+              <PrivateRoute exact path='/contact' component={Contact} />
+              <Route exact path='/login' component={Login} />
+              <Route exact path='/signup' component={SignUp} />
+              <Redirect to='/' />
+            </IonRouterOutlet>
 
-          <IonTabBar slot='bottom'>
-            <IonTabButton tab='profile' href='/profile' className='tabBarBtn'>
-              <IonIcon icon={accessibilityOutline} />
-              <IonLabel>
-                <IonText class='navFontSize'>Profile</IonText>
-              </IonLabel>
-            </IonTabButton>
+            <IonTabBar slot='bottom'>
+              <IonTabButton tab='profile' href='/profile' className='tabBarBtn'>
+                <IonIcon icon={accessibilityOutline} />
+                <IonLabel>
+                  <IonText class='navFontSize'>Profile</IonText>
+                </IonLabel>
+              </IonTabButton>
 
-            <IonTabButton
-              tab='education'
-              href='/education'
-              className='tabBarBtn'
-            >
-              <IonIcon icon={libraryOutline} />
-              <IonLabel>
-                <IonText class='navFontSize'>Education</IonText>
-              </IonLabel>
-            </IonTabButton>
+              <IonTabButton
+                tab='education'
+                href='/education'
+                className='tabBarBtn'
+              >
+                <IonIcon icon={libraryOutline} />
+                <IonLabel>
+                  <IonText class='navFontSize'>Education</IonText>
+                </IonLabel>
+              </IonTabButton>
 
-            <IonTabButton
-              tab='experience'
-              href='/experience'
-              className='tabBarBtn'
-            >
-              <IonIcon icon={newspaperOutline} />
-              <IonLabel>
-                <IonText class='navFontSize'>Experience</IonText>
-              </IonLabel>
-            </IonTabButton>
+              <IonTabButton
+                tab='experience'
+                href='/experience'
+                className='tabBarBtn'
+              >
+                <IonIcon icon={newspaperOutline} />
+                <IonLabel>
+                  <IonText class='navFontSize'>Experience</IonText>
+                </IonLabel>
+              </IonTabButton>
 
-            <IonTabButton tab='skills' href='/skills' className='tabBarBtn'>
-              <IonIcon icon={barChartOutline} />
-              <IonLabel>
-                <IonText class='navFontSize'>Skills</IonText>
-              </IonLabel>
-            </IonTabButton>
+              <IonTabButton tab='skills' href='/skills' className='tabBarBtn'>
+                <IonIcon icon={barChartOutline} />
+                <IonLabel>
+                  <IonText class='navFontSize'>Skills</IonText>
+                </IonLabel>
+              </IonTabButton>
 
-            <IonTabButton tab='projects' href='/projects' className='tabBarBtn'>
-              <IonIcon icon={folderOpenOutline} />
-              <IonLabel>
-                <IonText class='navFontSize'>Projects</IonText>
-              </IonLabel>
-            </IonTabButton>
+              <IonTabButton
+                tab='projects'
+                href='/projects'
+                className='tabBarBtn'
+              >
+                <IonIcon icon={folderOpenOutline} />
+                <IonLabel>
+                  <IonText class='navFontSize'>Projects</IonText>
+                </IonLabel>
+              </IonTabButton>
 
-            <IonTabButton tab='contact' href='/contact' className='tabBarBtn'>
-              <IonIcon icon={chatboxOutline} />
-              <IonLabel>
-                <IonText class='navFontSize'>Contact</IonText>
-              </IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
-      </IonReactRouter>
-    </IonApp>
-  </AuthProvider>
-)
+              <IonTabButton tab='contact' href='/contact' className='tabBarBtn'>
+                <IonIcon icon={chatboxOutline} />
+                <IonLabel>
+                  <IonText class='navFontSize'>Contact</IonText>
+                </IonLabel>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+        </IonReactRouter>
+      </IonApp>
+    )
+  }
+}
 
 export default App
