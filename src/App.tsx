@@ -54,42 +54,17 @@ const App = () => (
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-            <Route exact path='/profile'>
-              <Profile />
-            </Route>
-
-            <Route exact path='/education'>
-              <Education />
-            </Route>
-
-            <Route path='/experience'>
-              <Experience />
-            </Route>
-
-            <Route path='/skills'>
-              <Skills />
-            </Route>
-
-            <Route path='/projects'>
-              <Projects />
-            </Route>
-
-            <Route path='/contact'>
-              <Contact />
-            </Route>
-
-            <Route path='/login'>
-              <Login />
-            </Route>
-
-            <Route path='/signup'>
-              <SignUp />
-            </Route>
-
-            <Route exact path='/'>
-              <Redirect to='/profile' />
-            </Route>
+            <Route exact path='/profile' component={Profile} />
+            <Route path='/education' component={Education} />
+            <Route path='/experience' component={Experience} />
+            <Route path='/skills' component={Skills} />
+            <Route path='/projects' component={Projects} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/login' component={Login} />
+            <Route path='/signup' component={SignUp} />
+            <Route exact path='/' component={Profile} />
           </IonRouterOutlet>
+
           <IonTabBar slot='bottom'>
             <IonTabButton tab='profile' href='/profile'>
               <IonIcon icon={accessibilityOutline} />

@@ -26,7 +26,7 @@ import {
 } from 'ionicons/icons'
 import './SignUp.css'
 
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import Menu from '../../components/Menu/Menu'
 import MenuButton from '../../components/Menu/MenuButton'
 import coverImg from '../../assets/Profile/cover-img.jpg'
@@ -37,6 +37,7 @@ const SignUp = () => {
   const [password, setPassword] = useState()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const history = useHistory()
 
   const { signup } = useAuth()
 
@@ -47,8 +48,9 @@ const SignUp = () => {
       setLoading(true)
       setError('')
       await signup(email, password)
+      history.push('/login')
     } catch (err) {
-      console.log('Failed to sign up. Error: ', err)
+      console.log('Failed to Sing Up. Error: ', err)
       setError(err)
     }
     setLoading(false)
