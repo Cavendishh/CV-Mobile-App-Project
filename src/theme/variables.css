@@ -234,3 +234,26 @@ http://ionicframework.com/docs/theming/ */
     --ion-card-background: #1e1e1e;
   }
 }
+
+.container {
+  text-align: center;
+}
+
+.iconPaddingRight {
+  padding-right: 10px
+}
+
+.titleMarginFont {
+  margin-top: 20px;
+  font-size: 30px
+}
+
+.cardSubCenter {
+  text-align: center;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.roundCorner {
+  border-radius: 30px;
+}

@@ -1,10 +1,7 @@
 import { useState } from 'react'
 import {
   IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonGrid,
   IonCardContent,
   IonCard,
@@ -22,9 +19,7 @@ import {
 import { mailOutline, lockClosedOutline } from 'ionicons/icons'
 import { Link, useHistory } from 'react-router-dom'
 import './Login.css'
-import Menu from '../../components/Menu/Menu'
-import MenuButton from '../../components/Menu/MenuButton'
-import coverImg from '../../assets/Login/software-engineer.jpg'
+import coverImg from '../../assets/Login/software-engineer.png'
 import { useAuth } from '../../contexts/AuthContext'
 
 const Login = () => {
@@ -45,9 +40,9 @@ const Login = () => {
       console.log('Failed to Login.')
 
       if (err.message.includes('"email" must be a valid string')) {
-        error('Email not valid', 3000)
+        error('Email is not valid', 3000)
       } else if (err.message.includes('"password" must be a valid string')) {
-        error('Password not valid', 3000)
+        error('Password is not valid', 3000)
       } else {
         error(err.message, 3000)
       }
@@ -55,40 +50,31 @@ const Login = () => {
     setLoading(false)
   }
 
-  const changeEmail = (event) => {
-    setEmail(event.detail.value)
-  }
-
-  const changePassword = (event) => {
-    setPassword(event.detail.value)
-  }
+  const changeEmail = (event) => setEmail(event.detail.value)
+  const changePassword = (event) => setPassword(event.detail.value)
 
   return (
     <>
       <IonPage>
-        <Menu />
-        <IonHeader>
-          <IonToolbar>
-            <MenuButton />
-            <IonTitle>Login</IonTitle>
-          </IonToolbar>
-        </IonHeader>
         <IonContent>
           <IonGrid className='container'>
             <IonCard>
               <IonCardHeader>
-                <IonImg src={coverImg} />
-                <IonCardTitle className='cardTitle'>Log In</IonCardTitle>
+                <IonImg src={coverImg} alt='Avatar' />
+                <IonCardTitle className='titleMarginFont'>Log In</IonCardTitle>
               </IonCardHeader>
               <IonCardContent>
                 <IonList>
                   <IonItem>
-                    <IonIcon src={mailOutline} className='icon' />
+                    <IonIcon src={mailOutline} className='iconPaddingRight' />
                     <IonInput placeholder='Email' onIonChange={changeEmail} />
                   </IonItem>
 
-                  <IonItem className='marginBottom'>
-                    <IonIcon src={lockClosedOutline} className='icon' />
+                  <IonItem>
+                    <IonIcon
+                      src={lockClosedOutline}
+                      className='iconPaddingRight'
+                    />
                     <IonInput
                       placeholder='Password'
                       onIonChange={changePassword}
@@ -104,8 +90,8 @@ const Login = () => {
                     Login
                   </IonButton>
 
-                  <IonItem className='cardSub'>
-                    <IonCardSubtitle className='cardSub'>
+                  <IonItem>
+                    <IonCardSubtitle className='cardSubCenter'>
                       Or Sign up here first
                     </IonCardSubtitle>
                   </IonItem>

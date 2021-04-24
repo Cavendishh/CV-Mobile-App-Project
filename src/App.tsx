@@ -73,7 +73,7 @@ const App = () => (
             <Route exact path='/signup' component={SignUp} />
           </IonRouterOutlet>
 
-          <IonTabBar slot='bottom'>
+          <IonTabBar slot='bottom' id='tabBar'>
             <IonTabButton tab='profile' href='/profile'>
               <IonIcon icon={accessibilityOutline} />
               <IonLabel>Profile</IonLabel>
