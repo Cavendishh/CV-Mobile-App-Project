@@ -40,14 +40,10 @@ const Contact = () => {
         <IonContent>
           <IonGrid>
             <IonCard>
-              <IonCardHeader>
-                <IonCardSubtitle className='cardYear'>
-                  Contact Details
-                </IonCardSubtitle>
-                <IonCardTitle className='cardTitle'>
-                  Janne Kavander
-                </IonCardTitle>
-                <IonCardSubtitle className='cardSub'>
+              <IonCardHeader className='alignCenter'>
+                <IonCardSubtitle>Contact Details</IonCardSubtitle>
+                <IonCardTitle>Janne Kavander</IonCardTitle>
+                <IonCardSubtitle>
                   In case you want to contact me I would recommend emailing me
                   for the fastest response. My email can be copied below by
                   clicking 'Copy' button. Do not be afraid to contact me.
@@ -56,64 +52,79 @@ const Contact = () => {
               <IonCardContent>
                 <IonList>
                   <IonItem>
-                    <IonIcon src={locationOutline} />
+                    <IonIcon
+                      src={locationOutline}
+                      className='iconPaddingRight'
+                      color='secondary'
+                    />
                     Finland, Southern
                   </IonItem>
                   <IonItem>
-                    <IonIcon src={mailOutline} />
+                    <IonIcon
+                      src={mailOutline}
+                      className='iconPaddingRight'
+                      color='secondary'
+                    />
                     kavanderjanne@gmail.com
                     <IonButton
-                      fill='clear'
-                      id='kavanderjanne@gmail.com'
+                      fill='outline'
                       onClick={() => {
                         navigator.clipboard.writeText('kavanderjanne@gmail.com')
                       }}
+                      color='secondary'
+                      className='paddingLeft'
                     >
                       Copy
                     </IonButton>
                   </IonItem>
 
-                  <IonItem>
-                    <IonButton
-                      fill='clear'
-                      onClick={() =>
-                        window.open('https://github.com/Cavendishh', '_blank')
-                      }
-                    >
-                      <IonIcon src={logoGithub} />
-                      Github
-                    </IonButton>
-                  </IonItem>
+                  <IonButton
+                    fill='outline'
+                    expand='block'
+                    className='alignLeft topMargin'
+                    onClick={() =>
+                      window.open('https://github.com/Cavendishh', '_blank')
+                    }
+                    color='secondary'
+                  >
+                    <IonIcon src={logoGithub} className='iconPaddingRight' />
+                    Github
+                  </IonButton>
 
-                  <IonItem>
-                    <IonButton
-                      fill='clear'
-                      onClick={() =>
-                        window.open(
-                          'https://www.linkedin.com/in/janne-kavander/',
-                          '_blank'
-                        )
-                      }
-                    >
-                      <IonIcon src={logoLinkedin} />
-                      Linkedin
-                    </IonButton>
-                  </IonItem>
+                  <IonButton
+                    fill='outline'
+                    expand='block'
+                    className='alignLeft'
+                    onClick={() =>
+                      window.open(
+                        'https://www.linkedin.com/in/janne-kavander/',
+                        '_blank'
+                      )
+                    }
+                    color='secondary'
+                  >
+                    <IonIcon src={logoLinkedin} className='iconPaddingRight' />
+                    Linkedin
+                  </IonButton>
 
-                  <IonItem>
-                    <IonButton
-                      fill='clear'
-                      onClick={() =>
-                        window.open(
-                          'https://stackoverflow.com/users/13715738/janne?tab=profile',
-                          '_blank'
-                        )
-                      }
-                    >
-                      <IonIcon src={logoStackoverflow} />
-                      Stack Overflow
-                    </IonButton>
-                  </IonItem>
+                  <IonButton
+                    fill='outline'
+                    expand='block'
+                    className='alignLeft'
+                    onClick={() =>
+                      window.open(
+                        'https://stackoverflow.com/users/13715738/janne?tab=profile',
+                        '_blank'
+                      )
+                    }
+                    color='secondary'
+                  >
+                    <IonIcon
+                      src={logoStackoverflow}
+                      className='iconPaddingRight'
+                    />
+                    Stack Overflow
+                  </IonButton>
                 </IonList>
               </IonCardContent>
             </IonCard>

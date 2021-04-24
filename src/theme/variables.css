@@ -243,6 +243,10 @@ http://ionicframework.com/docs/theming/ */
   padding-right: 10px
 }
 
+.paddingLeft {
+  padding-left: 10px;
+}
+
 .titleMarginFont {
   margin-top: 20px;
   font-size: 30px
@@ -274,6 +278,7 @@ http://ionicframework.com/docs/theming/ */
 }
 
 .alignCenter {
+  justify-content: center;
   text-align: center;
 }
 
