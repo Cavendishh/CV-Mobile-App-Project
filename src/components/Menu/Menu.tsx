@@ -75,8 +75,8 @@ const Menu = () => (
           </IonItem>
           <IonItem>
             <IonIcon icon={logOutOutline} />
-            <Link to='/register'>
-              <IonButton fill='clear'>Register</IonButton>
+            <Link to='/signup'>
+              <IonButton fill='clear'>Sign Up</IonButton>
             </Link>
           </IonItem>
         </IonList>

@@ -26,7 +26,7 @@ import Skills from './pages/Skills/Skills'
 import Projects from './pages/Projects/Projects'
 import Contact from './pages/Contact/Contact'
 import Login from './pages/Login/Login'
-import Register from './pages/Register/Register'
+import SignUp from './pages/SignUp/SignUp'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -80,8 +80,8 @@ const App = () => (
             <Login />
           </Route>
 
-          <Route path='/register'>
-            <Register />
+          <Route path='/signup'>
+            <SignUp />
           </Route>
 
           <Route exact path='/'>
@@ -124,9 +124,9 @@ const App = () => (
             <IonLabel>Login</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab='register' href='/register'>
+          <IonTabButton tab='signup' href='/signup'>
             <IonIcon icon={logOutOutline} />
-            <IonLabel>Register</IonLabel>
+            <IonLabel>Sign Up</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

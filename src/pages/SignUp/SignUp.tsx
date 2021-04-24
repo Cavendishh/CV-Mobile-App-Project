@@ -24,13 +24,14 @@ import {
   mailOutline,
   lockClosedOutline,
 } from 'ionicons/icons'
+import './SignUp.css'
+
 import { Link } from 'react-router-dom'
-import './Login.css'
 import Menu from '../../components/Menu/Menu'
 import MenuButton from '../../components/Menu/MenuButton'
 import coverImg from '../../assets/Profile/cover-img.jpg'
 
-const Login = () => {
+const Register = () => {
   return (
     <>
       <IonPage>
@@ -38,7 +39,7 @@ const Login = () => {
         <IonHeader>
           <IonToolbar>
             <MenuButton />
-            <IonTitle>Login</IonTitle>
+            <IonTitle>Sign Up</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
@@ -47,21 +48,21 @@ const Login = () => {
               <IonCardHeader>
                 <IonImg src={coverImg} />
                 <IonCardTitle className='cardTitle'>
-                  Welcome to my CV!
+                  Sign Up below to access my CV
                 </IonCardTitle>
               </IonCardHeader>
               <IonCardContent>
                 <IonList>
                   <IonItem>
                     <IonCardSubtitle className='cardSub'>
-                      Fill in your Log In credentials below
+                      Fill in your Sign Up credentials below
                     </IonCardSubtitle>
                   </IonItem>
 
                   <IonItem>
                     <IonIcon src={mailOutline} />
                     <IonInput
-                      placeholder='Email'
+                      placeholder='Set Email'
                       onIonChange={(e) =>
                         console.log('Email: ', e.detail.value)
                       }
@@ -71,7 +72,7 @@ const Login = () => {
                   <IonItem>
                     <IonIcon src={lockClosedOutline} />
                     <IonInput
-                      placeholder='Password'
+                      placeholder='Set Password'
                       onIonChange={(e) =>
                         console.log('Password: ', e.detail.value)
                       }
@@ -79,20 +80,20 @@ const Login = () => {
                   </IonItem>
 
                   <IonButton expand='block'>
-                    <IonIcon src={keyOutline} />
-                    Login
+                    <IonIcon src={personAddOutline} />
+                    Sign Up
                   </IonButton>
 
                   <IonItem>
                     <IonCardSubtitle className='cardSub'>
-                      Or Sign up here first
+                      Or if you already registered go back to Login
                     </IonCardSubtitle>
                   </IonItem>
 
-                  <Link to='/signup'>
+                  <Link to='/login'>
                     <IonButton expand='block'>
-                      <IonIcon src={personAddOutline} />
-                      Sign Up
+                      <IonIcon src={keyOutline} />
+                      Return to Login
                     </IonButton>
                   </Link>
                 </IonList>
@@ -105,4 +106,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Register
