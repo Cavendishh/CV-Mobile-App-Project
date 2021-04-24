@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {
   IonContent,
   IonHeader,
@@ -19,17 +19,12 @@ import {
   IonInput,
   useIonToast,
 } from '@ionic/react'
-import {
-  keyOutline,
-  personAddOutline,
-  mailOutline,
-  lockClosedOutline,
-} from 'ionicons/icons'
+import { mailOutline, lockClosedOutline } from 'ionicons/icons'
 import { Link, useHistory } from 'react-router-dom'
 import './Login.css'
 import Menu from '../../components/Menu/Menu'
 import MenuButton from '../../components/Menu/MenuButton'
-import coverImg from '../../assets/Profile/cover-img.jpg'
+import coverImg from '../../assets/Login/software-engineer.jpg'
 import { useAuth } from '../../contexts/AuthContext'
 
 const Login = () => {
@@ -79,30 +74,21 @@ const Login = () => {
           </IonToolbar>
         </IonHeader>
         <IonContent>
-          <IonGrid>
-            {/* {error.length && <ErrorToast message={error} />} */}
+          <IonGrid className='container'>
             <IonCard>
               <IonCardHeader>
                 <IonImg src={coverImg} />
-                <IonCardTitle className='cardTitle'>
-                  Welcome to my CV!
-                </IonCardTitle>
+                <IonCardTitle className='cardTitle'>Log In</IonCardTitle>
               </IonCardHeader>
               <IonCardContent>
                 <IonList>
                   <IonItem>
-                    <IonCardSubtitle className='cardSub'>
-                      Fill in your Log In credentials below
-                    </IonCardSubtitle>
-                  </IonItem>
-
-                  <IonItem>
-                    <IonIcon src={mailOutline} />
+                    <IonIcon src={mailOutline} className='icon' />
                     <IonInput placeholder='Email' onIonChange={changeEmail} />
                   </IonItem>
 
-                  <IonItem>
-                    <IonIcon src={lockClosedOutline} />
+                  <IonItem className='marginBottom'>
+                    <IonIcon src={lockClosedOutline} className='icon' />
                     <IonInput
                       placeholder='Password'
                       onIonChange={changePassword}
@@ -113,12 +99,12 @@ const Login = () => {
                     expand='block'
                     disabled={loading}
                     onClick={handleLogin}
+                    color='secondary'
                   >
-                    <IonIcon src={keyOutline} />
                     Login
                   </IonButton>
 
-                  <IonItem>
+                  <IonItem className='cardSub'>
                     <IonCardSubtitle className='cardSub'>
                       Or Sign up here first
                     </IonCardSubtitle>
@@ -126,7 +112,6 @@ const Login = () => {
 
                   <Link to='/signup'>
                     <IonButton expand='block' disabled={loading}>
-                      <IonIcon src={personAddOutline} />
                       Sign Up
                     </IonButton>
                   </Link>
