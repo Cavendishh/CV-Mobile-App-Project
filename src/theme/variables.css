@@ -269,8 +269,6 @@ http://ionicframework.com/docs/theming/ */
   margin-bottom: 25px;
 }
 
-
-
 .bulletPoint {
   display: list-item;                                  
   list-style-type: disc;
@@ -287,10 +285,46 @@ http://ionicframework.com/docs/theming/ */
   font-size: 28px;
 }
 
+.decFontSize {
+  font-size: 14px;
+}
+
+.moreDecFontSize {
+  font-size: 11px
+}
+
 .tinyIncFontSize {
   font-size: 25px;
 }
 
 .secondaryColor {
   --background: var(--ion-color-secondary)
+}
+
+.navFontSize {
+  font-size: 10px;
+}
+
+ .tabBarBtn:nth-child(2) {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.tabBarBtn:nth-child(5) {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.tabBarBtn:nth-child(3) {
+  margin-right: -7px;
+}
+
+.tabBarBtn:nth-child(4) {
+  margin-left: -7px;
+}
+
+#tabBar {
+  background-color: #E8E8E8;
+  font-size: 5px;
+  max-width: 100%;
 }

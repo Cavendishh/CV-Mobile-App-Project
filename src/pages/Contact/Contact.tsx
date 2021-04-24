@@ -14,6 +14,7 @@ import {
   IonCardSubtitle,
   IonButton,
   IonIcon,
+  IonText,
 } from '@ionic/react'
 import {
   logoGithub,
@@ -57,7 +58,7 @@ const Contact = () => {
                       className='iconPaddingRight'
                       color='secondary'
                     />
-                    Finland, Southern
+                    <IonText className='decFontSize'>Finland, Southern</IonText>
                   </IonItem>
                   <IonItem>
                     <IonIcon
@@ -65,14 +66,16 @@ const Contact = () => {
                       className='iconPaddingRight'
                       color='secondary'
                     />
-                    kavanderjanne@gmail.com
+                    <IonText className='decFontSize'>
+                      kavanderjanne@gmail.com
+                    </IonText>
                     <IonButton
                       fill='outline'
                       onClick={() => {
                         navigator.clipboard.writeText('kavanderjanne@gmail.com')
                       }}
                       color='secondary'
-                      className='paddingLeft'
+                      className='paddingLeft moreDecFontSize'
                     >
                       Copy
                     </IonButton>

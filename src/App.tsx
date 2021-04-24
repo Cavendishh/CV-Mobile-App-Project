@@ -7,6 +7,7 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
+  IonText,
 } from '@ionic/react'
 import {
   libraryOutline,
@@ -73,35 +74,55 @@ const App = () => (
             <Route exact path='/signup' component={SignUp} />
           </IonRouterOutlet>
 
-          <IonTabBar slot='bottom' id='tabBar'>
-            <IonTabButton tab='profile' href='/profile'>
+          <IonTabBar slot='bottom'>
+            <IonTabButton tab='profile' href='/profile' className='tabBarBtn'>
               <IonIcon icon={accessibilityOutline} />
-              <IonLabel>Profile</IonLabel>
+              <IonLabel>
+                <IonText class='navFontSize'>Profile</IonText>
+              </IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab='education' href='/education'>
+            <IonTabButton
+              tab='education'
+              href='/education'
+              className='tabBarBtn'
+            >
               <IonIcon icon={libraryOutline} />
-              <IonLabel>Education</IonLabel>
+              <IonLabel>
+                <IonText class='navFontSize'>Education</IonText>
+              </IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab='experience' href='/experience'>
+            <IonTabButton
+              tab='experience'
+              href='/experience'
+              className='tabBarBtn'
+            >
               <IonIcon icon={newspaperOutline} />
-              <IonLabel>Experience</IonLabel>
+              <IonLabel>
+                <IonText class='navFontSize'>Experience</IonText>
+              </IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab='skills' href='/skills'>
+            <IonTabButton tab='skills' href='/skills' className='tabBarBtn'>
               <IonIcon icon={barChartOutline} />
-              <IonLabel>Skills</IonLabel>
+              <IonLabel>
+                <IonText class='navFontSize'>Skills</IonText>
+              </IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab='projects' href='/projects'>
+            <IonTabButton tab='projects' href='/projects' className='tabBarBtn'>
               <IonIcon icon={folderOpenOutline} />
-              <IonLabel>Projects</IonLabel>
+              <IonLabel>
+                <IonText class='navFontSize'>Projects</IonText>
+              </IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab='contact' href='/contact'>
+            <IonTabButton tab='contact' href='/contact' className='tabBarBtn'>
               <IonIcon icon={chatboxOutline} />
-              <IonLabel>Contact</IonLabel>
+              <IonLabel>
+                <IonText class='navFontSize'>Contact</IonText>
+              </IonLabel>
             </IonTabButton>
           </IonTabBar>
         </IonTabs>
