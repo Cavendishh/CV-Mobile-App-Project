@@ -28,6 +28,7 @@ import Contact from './pages/Contact/Contact'
 import Login from './pages/Login/Login'
 import SignUp from './pages/SignUp/SignUp'
 import { AuthProvider } from './contexts/AuthContext'
+import PrivateRoute from './PrivateRoute'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -54,15 +55,15 @@ const App = () => (
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-            <Route exact path='/profile' component={Profile} />
-            <Route path='/education' component={Education} />
-            <Route path='/experience' component={Experience} />
-            <Route path='/skills' component={Skills} />
-            <Route path='/projects' component={Projects} />
-            <Route path='/contact' component={Contact} />
-            <Route path='/login' component={Login} />
-            <Route path='/signup' component={SignUp} />
-            <Route exact path='/' component={Profile} />
+            <PrivateRoute exact path='/' component={Profile} />
+            <PrivateRoute exact path='/profile' component={Profile} />
+            <PrivateRoute exact path='/education' component={Education} />
+            <PrivateRoute exact path='/experience' component={Experience} />
+            <PrivateRoute exact path='/skills' component={Skills} />
+            <PrivateRoute exact path='/projects' component={Projects} />
+            <PrivateRoute exact path='/contact' component={Contact} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/signup' component={SignUp} />
           </IonRouterOutlet>
 
           <IonTabBar slot='bottom'>
