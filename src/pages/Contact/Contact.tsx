@@ -1,3 +1,6 @@
+// Designer, Developer, and Author - Janne Kavander
+// Student number 1903048
+
 import {
   IonContent,
   IonHeader,
@@ -72,6 +75,7 @@ const Contact = () => {
                     <IonButton
                       fill='outline'
                       onClick={() => {
+                        // Copies the email to clipboard
                         navigator.clipboard.writeText('kavanderjanne@gmail.com')
                       }}
                       color='secondary'
@@ -86,6 +90,7 @@ const Contact = () => {
                     expand='block'
                     className='alignLeft topMargin'
                     onClick={() =>
+                      // Redirect to Github
                       window.open('https://github.com/Cavendishh', '_blank')
                     }
                     color='secondary'
@@ -100,6 +105,7 @@ const Contact = () => {
                     className='alignLeft'
                     onClick={() =>
                       window.open(
+                        // Redirect to Linkedin
                         'https://www.linkedin.com/in/janne-kavander/',
                         '_blank'
                       )
@@ -116,6 +122,7 @@ const Contact = () => {
                     className='alignLeft'
                     onClick={() =>
                       window.open(
+                        // Redirect to Stackoverflow
                         'https://stackoverflow.com/users/13715738/janne?tab=profile',
                         '_blank'
                       )

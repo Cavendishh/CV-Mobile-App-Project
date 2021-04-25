@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+// Designer, Developer, and Author - Janne Kavander
+// Student number 1903048
+
+import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import {
   IonMenu,
@@ -13,7 +16,6 @@ import {
 } from '@ionic/react'
 import {
   libraryOutline,
-  logInOutline,
   logOutOutline,
   barChartOutline,
   accessibilityOutline,
@@ -28,6 +30,9 @@ const Menu = () => {
   const { currentUser, logout } = useAuth()
   const history = useHistory()
 
+  // If Logout succesfull redirect to login page
+  // Else throw error
+  // Async function so we can wait for logout() to respond before redirect / showing error
   const handleLogout = async () => {
     setError('')
     try {

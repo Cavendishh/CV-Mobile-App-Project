@@ -1,3 +1,6 @@
+// Designer, Developer, and Author - Janne Kavander
+// Student number 1903048
+
 import { useState } from 'react'
 import {
   IonContent,
@@ -18,7 +21,6 @@ import {
 } from '@ionic/react'
 import { mailOutline, lockClosedOutline } from 'ionicons/icons'
 import './SignUp.css'
-
 import { Link, useHistory } from 'react-router-dom'
 import coverImg from '../../assets/Login/software-engineer.png'
 import { useAuth } from '../../contexts/AuthContext'
@@ -30,14 +32,19 @@ const SignUp = () => {
   const [error, clearError] = useIonToast()
   const history = useHistory()
 
+  // Brings sign up function for handleSingUp
   const { signup } = useAuth()
 
+  // Handles login with firebase
   const handleSignUp = async () => {
     try {
+      // Sets loading (disabled buttons)
+      // Waits for firebase to respond before redirecting to Profile
       setLoading(true)
       await signup(email, password)
       history.push('/profile')
     } catch (err) {
+      // If login unsuccesfull give popup feedback to user for 3 seconds
       console.log('Failed to Sign Up.')
 
       if (err.message.includes('"email" must be a valid string')) {
@@ -48,9 +55,11 @@ const SignUp = () => {
         error(err.message, 3000)
       }
     }
+    // Buttons are useable again in case request fails
     setLoading(false)
   }
 
+  // Keeps track of email and password field
   const changeEmail = (event) => setEmail(event.detail.value)
   const changePassword = (event) => setPassword(event.detail.value)
 

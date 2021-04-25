@@ -1,3 +1,6 @@
+// Designer, Developer, and Author - Janne Kavander
+// Student number 1903048
+
 import { Redirect, Route } from 'react-router-dom'
 import {
   IonApp,
@@ -51,6 +54,9 @@ import './theme/variables.css'
 const App = () => {
   const { currentUser } = useAuth()
 
+  // If there is no current user (nobody has logged in), it will return as false
+  // In that case user can only go to Login or Signup pages AND no navbar is visible
+  // If user has logged in, they can access any route AND navbar is visible for navigation
   if (!currentUser) {
     return (
       <IonApp>

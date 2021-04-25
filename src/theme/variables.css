@@ -235,6 +235,7 @@ http://ionicframework.com/docs/theming/ */
   }
 }
 
+/* Every page has Ion Grid that centers the content*/
 .container {
   text-align: center;
 }
@@ -269,6 +270,7 @@ http://ionicframework.com/docs/theming/ */
   margin-bottom: 25px;
 }
 
+/* Creates bullet points (For Experience page) */
 .bulletPoint {
   display: list-item;                                  
   list-style-type: disc;
@@ -301,11 +303,12 @@ http://ionicframework.com/docs/theming/ */
   --background: var(--ion-color-secondary)
 }
 
+/* All these below changes are to make Tab Bar in a proper size on Android version*/
 .navFontSize {
   font-size: 10px;
 }
 
- .tabBarBtn:nth-child(2) {
+.tabBarBtn:nth-child(2) {
   margin-left: -10px;
   margin-right: -10px;
 }

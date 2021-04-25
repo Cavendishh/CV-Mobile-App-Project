@@ -1,3 +1,6 @@
+// Designer, Developer, and Author - Janne Kavander
+// Student number 1903048
+
 import {
   IonContent,
   IonHeader,
