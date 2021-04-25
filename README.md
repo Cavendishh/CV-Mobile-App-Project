@@ -10,8 +10,8 @@ Installation
 6A) Sign up your own account
 OR
 6B) Log in with following credentials:
-  email: 'test@test.com'
-  password: 'password'
+  <br>email: 'test@test.com'
+  <br>password: 'password'
   
   
   
