@@ -36,7 +36,7 @@ const SignUp = () => {
     try {
       setLoading(true)
       await signup(email, password)
-      history.push('/login')
+      history.push('/profile')
     } catch (err) {
       console.log('Failed to Sign Up.')
 
