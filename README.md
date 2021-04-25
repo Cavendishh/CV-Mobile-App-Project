@@ -8,8 +8,7 @@ Installation
 4) Type 'ionic serve' to start the application
 5) On browser Ctrl + Shift + I to open console and select mobile application (android) view <br>
 6) Sign up your own account <br>
-OR <br>
-7) Log in with following credentials: <br>
+7) OR you can => Log in with following credentials: <br>
   email: 'test@test.com' <br>
   password: 'password'
   
