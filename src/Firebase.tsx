@@ -9,6 +9,7 @@ import 'firebase/auth'
 // Only teacher and me can access it to prevent unauthorized use
 // Also initializes the web app to use these configs
 const app = firebase.initializeApp({
+  // Deprecated, no longer in use
   apiKey: 'AIzaSyA_B8sJCIUjsZCfYStBAIY7tgZRgiEG6L8',
   authDomain: 'auth-mobile-app.firebaseapp.com',
   projectId: 'auth-mobile-app',
